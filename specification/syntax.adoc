@@ -33,10 +33,6 @@ include::syntax/ubl-root-application-response/issue-date.adoc[]
 
 include::syntax/ubl-root-application-response/issue-time.adoc[]
 
-==== cbc:Note
-
-include::syntax/ubl-root-application-response/note.adoc[]
-
 ==== cac:SenderParty
 
 include::syntax/ubl-root-application-response/sender-party.adoc[]

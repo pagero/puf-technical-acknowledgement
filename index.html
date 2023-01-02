@@ -561,7 +561,6 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_cbcid">cbc:ID</a></li>
 <li><a href="#_cbcissuedate">cbc:IssueDate</a></li>
 <li><a href="#_cbcissuetime">cbc:IssueTime</a></li>
-<li><a href="#_cbcnote">cbc:Note</a></li>
 <li><a href="#_cacsenderparty">cac:SenderParty</a></li>
 <li><a href="#_cacreceiverparty">cac:ReceiverParty</a></li>
 </ul>
@@ -1135,43 +1134,6 @@ A unique identifier of the technical acknowledgement.</p></td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_cbcnote"><a class="anchor" href="#_cbcnote"></a><a class="link" href="#_cbcnote">cbc:Note</a></h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Path</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:Note</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Note</strong><br>
-Free text, can be repeated multiple times.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>Example</strong><br>
-<em>cbc:Note example</em></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ApplicationResponse&gt;</span>
-  <span class="comment">&lt;!-- Code omitted for clarity --&gt;</span>
-  <span class="tag">&lt;cbc:Note&gt;</span>This<span class="tag">&lt;/cbc:Note&gt;</span>
-  <span class="tag">&lt;cbc:Note&gt;</span>is a<span class="tag">&lt;/cbc:Note&gt;</span>
-  <span class="tag">&lt;cbc:Note&gt;</span>free text example<span class="tag">&lt;/cbc:Note&gt;</span>
-  <span class="comment">&lt;!-- Code omitted for clarity --&gt;</span>
-<span class="tag">&lt;/ApplicationResponse&gt;</span></code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
 <h4 id="_cacsenderparty"><a class="anchor" href="#_cacsenderparty"></a><a class="link" href="#_cacsenderparty">cac:SenderParty</a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 2. Elements available in cac:SenderParty</caption>
@@ -1197,37 +1159,6 @@ Sender&#8217;s electronic address.</p></td>
 Scheme identifier of electronic address.<br>
 <em>According to code list <a href="#_puf_007_endpointscheme">[_puf_007_endpointscheme]</a></em></p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:PartyIdentification/cbc:ID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sender party identifier</strong><br>
-Identifier of the sender.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:PartyIdentification/cbc:ID/@schemeID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sender party identifier scheme id</strong><br>
-Scheme identifier of sender identifier.<br>
-<em>Value according to code list <a href="#_puf_008_identificationscheme">[_puf_008_identificationscheme]</a>.</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:PartyLegalEntity/cbc:RegistrationName</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sender party name</strong><br>
-Sender party name.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:Contact/cbc:Name</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sender party contact point name</strong><br>
-Name of the sending party contact point for communication regarding this message.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:Contact/cbc:Telephone</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sender party contact point telephone</strong><br>
-Telephone number of the sending party contact point for communication regarding this message.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:Contact/cbc:ElectronicMail</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sender party contact point email</strong><br>
-Email of the sending party contact point for communication regarding this message.</p></td>
-</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -1240,9 +1171,6 @@ Email of the sending party contact point for communication regarding this messag
   <span class="comment">&lt;!-- Code omitted for clarity --&gt;</span>
   <span class="tag">&lt;cac:SenderParty&gt;</span>
     <span class="tag">&lt;cbc:EndpointID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0088</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>7310000000000<span class="tag">&lt;/EndpointID&gt;</span>
-      <span class="tag">&lt;cac:PartyLegalEntity&gt;</span>
-        <span class="tag">&lt;cbc:RegistrationName&gt;</span>Sender party name<span class="tag">&lt;/cbc:Name&gt;</span>
-      <span class="tag">&lt;/cac:PartyLegalEntity&gt;</span>
   <span class="tag">&lt;/cac:SenderParty&gt;</span>
   <span class="comment">&lt;!-- Code omitted for clarity --&gt;</span>
 <span class="tag">&lt;/ApplicationResponse&gt;</span></code></pre>
@@ -1275,22 +1203,6 @@ Receiver’s electronic address.</p></td>
 Scheme identifier of electronic address.<br>
 <em>According to code list <a href="#_puf_007_endpointscheme">[_puf_007_endpointscheme]</a></em></p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:PartyIdentification/cbc:ID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Receiver party identifier</strong><br>
-Identifier of the receiver.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:PartyIdentification/cbc:ID/@schemeID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Receiver party identifier scheme id</strong><br>
-Scheme identifier of receiver identifier.<br>
-<em>Value according to code list <a href="#_puf_008_identificationscheme">[_puf_008_identificationscheme]</a>.</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:PartyLegalEntity/cbc:RegistrationName</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Receiver’s party name</strong><br>
-The name of the party receiving the response.</p></td>
-</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -1303,9 +1215,6 @@ The name of the party receiving the response.</p></td>
   <span class="comment">&lt;!-- Code omitted for clarity --&gt;</span>
   <span class="tag">&lt;cac:ReceiverParty&gt;</span>
       <span class="tag">&lt;cbc:EndpointID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0088</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>7310000000000<span class="tag">&lt;/EndpointID&gt;</span>
-      <span class="tag">&lt;cac:PartyLegalEntity&gt;</span>
-        <span class="tag">&lt;cbc:RegistrationName&gt;</span>Receiver party name<span class="tag">&lt;/cbc:Name&gt;</span>
-      <span class="tag">&lt;/cac:PartyLegalEntity&gt;</span>
   <span class="tag">&lt;/cac:ReceiverParty&gt;</span>
   <span class="comment">&lt;!-- Code omitted for clarity --&gt;</span>
 <span class="tag">&lt;/ApplicationResponse&gt;</span></code></pre>
