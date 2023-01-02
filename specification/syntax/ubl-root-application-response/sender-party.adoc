@@ -1,0 +1,54 @@
+.Elements available in cac:SenderParty
+|===
+|Path |Description
+
+|`cbc:EndpointID`
+|**Electronic Identifier** +
+Sender's electronic address.
+
+|`cbc:EndpointID/@schemeID`
+|**Electronic Identifier scheme ID** +
+Scheme identifier of electronic address. +
+_According to code list <<_puf_007_endpointscheme>>_
+
+|`cac:PartyIdentification/cbc:ID`
+|**Sender party identifier** +
+Identifier of the sender.
+
+|`cac:PartyIdentification/cbc:ID/@schemeID`
+|**Sender party identifier scheme id** +
+Scheme identifier of sender identifier. +
+_Value according to code list <<_puf_008_identificationscheme>>._
+
+|`cac:PartyLegalEntity/cbc:RegistrationName`
+|**Sender party name** +
+Sender party name.
+
+|`cac:Contact/cbc:Name`
+|**Sender party contact point name** +
+Name of the sending party contact point for communication regarding this message.
+
+|`cac:Contact/cbc:Telephone`
+|**Sender party contact point telephone** +
+Telephone number of the sending party contact point for communication regarding this message.
+
+|`cac:Contact/cbc:ElectronicMail`
+|**Sender party contact point email** +
+Email of the sending party contact point for communication regarding this message.
+|===
+
+*Example* +
+_cac:SenderParty with example values_
+[source,xml]
+----
+<ApplicationResponse>
+  <!-- Code omitted for clarity -->
+  <cac:SenderParty>
+    <cbc:EndpointID schemeID="0088">7310000000000</EndpointID>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>Sender party name</cbc:Name>
+      </cac:PartyLegalEntity>
+  </cac:SenderParty>
+  <!-- Code omitted for clarity -->
+</ApplicationResponse>
+----
