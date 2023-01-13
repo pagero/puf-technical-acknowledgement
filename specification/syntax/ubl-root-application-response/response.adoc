@@ -13,13 +13,9 @@ A code stating the status of the invoice in the process. +
 _Value according to code list +
 <<_puf_016_invoicestatuscode>>._
 
-|`cac:Status/cbc:StatusReasonCode`
-|**Status reason code** +
-A code defining a clarification given for the status.
-
-|`cac:Status/cbc:StatusReason`
-|**Status reason text** +
-The description of the clarification given for the status.
+|`cbc:Description`
+|**Response textual notes** +
+A textual note containing comments or instructions relevant to the response.
 
 |===
 
@@ -40,26 +36,12 @@ _cac:Response with example values_
                 <puf:ReferencedDocumentInterchangeID>
                   <cbc:ID>123456789</cbc:ID>
                 </puf:ReferencedDocumentInterchangeID>  
-                <puf:DocumentMatchingID>
-                  <cbc:ID>123456789</cbc:ID>
-                </puf:DocumentMatchingID>  
               </puf:PageroExtension>
-              <puf:AdditionalDocumentReference>
-                <cbc:ID>1456123</cbc:ID>
-                <cbc:DocumentTypeCode>M</cbc:DocumentTypeCode>
-                <cbc:DocumentDescription>LCD</cbc:DocumentDescription>
-                <cac:Attachment>
-                  <cbc:EmbeddedDocumentBinaryObject filename="123456789_12345.xml" mimeCode="application/xml">U29tZSBkb2N1bWVudA==</cbc:EmbeddedDocumentBinaryObject>
-                </cac:Attachment>
-              </puf:AdditionalDocumentReference>
           </ext:ExtensionContent>
         </ext:UBLExtension>
       <ext:UBLExtensions>
-      <cbc:ResponseCode>APPROVED</cbc:ResponseCode>
-        <cac:Status>
-            <cbc:StatusReasonCode>XSD_ZATCA_VALID</cbc:StatusReasonCode>
-            <cbc:StatusReason>Complied with UBL 2.1 standards in line with ZATCA specifications</cbc:StatusReason>
-        </cac:Status>
+      <cbc:ResponseCode>RE</cbc:ResponseCode>
+        <cbc:Description>Rejected due to schematron validation errors</cbc:Description>
     </cac:Response>    
   <!-- Code omitted for clarity -->
 </ApplicationResponse>
