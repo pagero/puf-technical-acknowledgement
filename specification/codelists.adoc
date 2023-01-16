@@ -17,7 +17,12 @@ Lastly, in some cases, *all* the values are defined solely for PUF.
 |`cac:AccountingSupplierParty/cac:Party/cbc:EndpointID/@schemeID` +
 `cac:AccountingCustomerParty/cac:Party/cbc:EndpointID/@schemeID`
 |<<_puf_007_endpointscheme>>
+
+|Message response code 
+|`cac:DocumentResponse/cac:Response/cbc:ResponseCode`
+|<<_puf_018_applicationresponsecode>>
 |===
+
 
 === PUF-007-ENDPOINTSCHEME
 

@@ -1245,10 +1245,10 @@ Extension is added to provide additional information in the <code>cac:Response</
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ResponseCode</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Invoice status</strong><br>
-A code stating the status of the invoice in the process.<br>
-<em>Value according to code list<br>
-<a href="#_puf_016_invoicestatuscode">[_puf_016_invoicestatuscode]</a>.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Message response code</strong><br>
+A code stating whether the referenced message was cleared through validation and advanced to the next step in the process.<br>
+A negative response states that the document was not processed because of identified issues.<br>
+<a href="#_puf_018_applicationresponsecode">PUF-018-APPLICATIONRESPONSECODE</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:Description</code></p></td>
@@ -1542,6 +1542,11 @@ The "Require ext:UBLExtensions"-column indicates whether or not the use of UBL e
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:AccountingSupplierParty/cac:Party/cbc:EndpointID/@schemeID</code><br>
 <code>cac:AccountingCustomerParty/cac:Party/cbc:EndpointID/@schemeID</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_puf_007_endpointscheme">PUF-007-ENDPOINTSCHEME</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message response code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:DocumentResponse/cac:Response/cbc:ResponseCode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_puf_018_applicationresponsecode">PUF-018-APPLICATIONRESPONSECODE</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -8,10 +8,10 @@ Extension is added to provide additional information in the `cac:Response` eleme
 <<_response_extension>>
 
 |`cbc:ResponseCode`
-|**Invoice status** +
-A code stating the status of the invoice in the process. +
-_Value according to code list +
-<<_puf_016_invoicestatuscode>>._
+|**Message response code** +
+A code stating whether the referenced message was cleared through validation and advanced to the next step in the process. +
+A negative response states that the document was not processed because of identified issues. +
+<<_puf_018_applicationresponsecode>>
 
 |`cbc:Description`
 |**Response textual notes** +
