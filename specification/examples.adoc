@@ -1,3 +1,3 @@
 Example files can be downloaded here: 
 
-- https://github.com/pagero/puf/tree/master/examples[PUF XYZ example files (.xml)]
+- https://github.com/pagero/puf-technical-acknowledgement/blob/master/examples/[PUF Technical Acknowledgement example files (.xml)]
