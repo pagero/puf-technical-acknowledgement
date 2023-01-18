@@ -1122,43 +1122,18 @@ A unique identifier of the technical acknowledgement.</p></td>
 </div>
 <div class="sect3">
 <h4 id="_cacsenderparty"><a class="anchor" href="#_cacsenderparty"></a><a class="link" href="#_cacsenderparty">cac:SenderParty</a></h4>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Elements available in cac:SenderParty</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Path</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:EndpointID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Electronic Identifier</strong><br>
-Sender&#8217;s electronic address.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:EndpointID/@schemeID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Electronic Identifier scheme ID</strong><br>
-Scheme identifier of electronic address.<br>
-<em>According to code list <a href="#_puf_007_endpointscheme">PUF-007-ENDPOINTSCHEME</a></em></p></td>
-</tr>
-</tbody>
-</table>
+<div class="paragraph">
+<p>cac:SenderParty is required according to XSD but will not be populated in PUF Technical Acknowledgement</p>
+</div>
 <div class="paragraph">
 <p><strong>Example</strong><br>
-<em>cac:SenderParty with example values</em></p>
+cac:SenderParty</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ApplicationResponse&gt;</span>
   <span class="comment">&lt;!-- Code omitted for clarity --&gt;</span>
-  <span class="tag">&lt;cac:SenderParty&gt;</span>
-    <span class="tag">&lt;cbc:EndpointID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0088</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>7310000000000<span class="tag">&lt;/EndpointID&gt;</span>
-  <span class="tag">&lt;/cac:SenderParty&gt;</span>
+  <span class="tag">&lt;cac:SenderParty</span><span class="tag">/&gt;</span>
   <span class="comment">&lt;!-- Code omitted for clarity --&gt;</span>
 <span class="tag">&lt;/ApplicationResponse&gt;</span></code></pre>
 </div>
@@ -1166,43 +1141,18 @@ Scheme identifier of electronic address.<br>
 </div>
 <div class="sect3">
 <h4 id="_cacreceiverparty"><a class="anchor" href="#_cacreceiverparty"></a><a class="link" href="#_cacreceiverparty">cac:ReceiverParty</a></h4>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. Elements available in cac:ReceiverParty</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Path</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:EndpointID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Electronic Identifier</strong><br>
-Receiver’s electronic address.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:EndpointID/@schemeID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Electronic Identifier scheme ID</strong><br>
-Scheme identifier of electronic address.<br>
-<em>According to code list <a href="#_puf_007_endpointscheme">PUF-007-ENDPOINTSCHEME</a></em></p></td>
-</tr>
-</tbody>
-</table>
+<div class="paragraph">
+<p>cac:ReceiverParty is required according to XSD but will not be populated in PUF Technical Acknowledgement</p>
+</div>
 <div class="paragraph">
 <p><strong>Example</strong><br>
-<em>cac:ReceiverParty with example values</em></p>
+cac:ReceiverParty</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ApplicationResponse&gt;</span>
   <span class="comment">&lt;!-- Code omitted for clarity --&gt;</span>
-  <span class="tag">&lt;cac:ReceiverParty&gt;</span>
-      <span class="tag">&lt;cbc:EndpointID</span> <span class="attribute-name">schemeID</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0088</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>7310000000000<span class="tag">&lt;/EndpointID&gt;</span>
-  <span class="tag">&lt;/cac:ReceiverParty&gt;</span>
+  <span class="tag">&lt;cac:ReceiverParty</span><span class="tag">/&gt;</span>
   <span class="comment">&lt;!-- Code omitted for clarity --&gt;</span>
 <span class="tag">&lt;/ApplicationResponse&gt;</span></code></pre>
 </div>
@@ -1214,7 +1164,7 @@ Scheme identifier of electronic address.<br>
 <div class="sect3">
 <h4 id="_cacresponse"><a class="anchor" href="#_cacresponse"></a><a class="link" href="#_cacresponse">cac:Response</a></h4>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 4. Elements available in cac:Response</caption>
+<caption class="title">Table 2. Elements available in cac:Response</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1279,7 +1229,7 @@ A textual note containing comments or instructions relevant to the response.</p>
 <div class="sect3">
 <h4 id="_cacdocumentreference"><a class="anchor" href="#_cacdocumentreference"></a><a class="link" href="#_cacdocumentreference">cac:DocumentReference</a></h4>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 5. Elements available in cac:DocumentReference</caption>
+<caption class="title">Table 3. Elements available in cac:DocumentReference</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1349,7 +1299,7 @@ Type code of the referenced invoice (e.g. 380=Invoice, 381 Credit note etc.).</p
 <p>Below table shows the definition of elements added to the extension <code>puf:ResponseExtension</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 6. Elements added in puf:ResponseExtension</caption>
+<caption class="title">Table 4. Elements added in puf:ResponseExtension</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1425,7 +1375,7 @@ to the Invoice in Pagero Online.</p></td>
 <div class="sect2">
 <h3 id="_code_lists_for_coded_elements"><a class="anchor" href="#_code_lists_for_coded_elements"></a><a class="link" href="#_code_lists_for_coded_elements">5.1. Code lists for coded elements</a></h3>
 <table class="tableblock frame-all grid-all fit-content stretch">
-<caption class="title">Table 7. Table of the code lists used</caption>
+<caption class="title">Table 5. Table of the code lists used</caption>
 <colgroup>
 <col>
 <col>

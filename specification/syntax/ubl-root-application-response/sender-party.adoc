@@ -1,26 +1,12 @@
-.Elements available in cac:SenderParty
-|===
-|Path |Description
-
-|`cbc:EndpointID`
-|**Electronic Identifier** +
-Sender's electronic address.
-
-|`cbc:EndpointID/@schemeID`
-|**Electronic Identifier scheme ID** +
-Scheme identifier of electronic address. +
-_According to code list <<_puf_007_endpointscheme>>_
-|===
+cac:SenderParty is required according to XSD but will not be populated in PUF Technical Acknowledgement
 
 *Example* +
-_cac:SenderParty with example values_
+cac:SenderParty
 [source,xml]
 ----
 <ApplicationResponse>
   <!-- Code omitted for clarity -->
-  <cac:SenderParty>
-    <cbc:EndpointID schemeID="0088">7310000000000</EndpointID>
-  </cac:SenderParty>
+  <cac:SenderParty/>
   <!-- Code omitted for clarity -->
 </ApplicationResponse>
 ----

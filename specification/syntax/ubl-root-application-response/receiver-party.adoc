@@ -1,26 +1,13 @@
-.Elements available in cac:ReceiverParty
-|===
-|Path |Description
-
-|`cbc:EndpointID`
-|**Electronic Identifier** +
-Receiver’s electronic address.
-
-|`cbc:EndpointID/@schemeID`
-|**Electronic Identifier scheme ID** +
-Scheme identifier of electronic address. +
-_According to code list <<_puf_007_endpointscheme>>_
-|===
+cac:ReceiverParty is required according to XSD but will not be populated in PUF Technical Acknowledgement
 
 *Example* +
-_cac:ReceiverParty with example values_
+cac:ReceiverParty
+
 [source,xml]
 ----
 <ApplicationResponse>
   <!-- Code omitted for clarity -->
-  <cac:ReceiverParty>
-      <cbc:EndpointID schemeID="0088">7310000000000</EndpointID>
-  </cac:ReceiverParty>
+  <cac:ReceiverParty/>
   <!-- Code omitted for clarity -->
 </ApplicationResponse>
 ----
