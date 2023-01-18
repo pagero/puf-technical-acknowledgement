@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- EXAMPLE FILE PUF Technical Acknowledgement. Use Case: Response sent from Pagero -> Issuer of invoice. Process status rejected RE -->
+<ApplicationResponse xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                     xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                     xmlns:puf="urn:pagero:ExtensionComponent:1.0"
+                     xmlns="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2">
+   <!-- Specification Identifier -->
+   <cbc:CustomizationID>urn:pagero.com:puf:technical_acknowledgement:1.0</cbc:CustomizationID>
+   <!-- Business process type identifier -->
+   <cbc:ProfileID>urn:pagero.com:puf:technical_acknowledgement:1.0</cbc:ProfileID>
+   <!-- Response Identifier -->
+   <cbc:ID>123456</cbc:ID>
+   <!-- Response Issue date -->
+   <cbc:IssueDate>2023-01-18</cbc:IssueDate>
+   <!-- Response Issue Time -->
+   <cbc:IssueTime>12:32:21</cbc:IssueTime>
+   <!-- Sender Party -->
+   <cac:SenderParty/>
+   <!-- Receiver Party -->
+   <cac:ReceiverParty/>
+   <!-- Document Response -->
+   <cac:DocumentResponse>
+      <!-- Response -->
+      <cac:Response>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionURI>urn:pagero:ExtensionComponent:1.0:PageroExtension:ResponseExtension</ext:ExtensionURI>
+               <ext:ExtensionContent>
+                  <puf:PageroExtension>
+                     <puf:ResponseExtension>
+                        <!-- The interchange id of the referenced document. If sent by the issuer -->
+                        <puf:ReferencedDocumentInterchangeID>
+                           <cbc:ID>123456789</cbc:ID>
+                        </puf:ReferencedDocumentInterchangeID>
+                     </puf:ResponseExtension>
+                  </puf:PageroExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <!-- Response Code -->
+         <cbc:ResponseCode>RE</cbc:ResponseCode>
+         <!-- Description -->
+         <cbc:Description>Clearance request failed due to following schematron validations; Clearance schematron validation results: 
+            [BR-10]-An Invoice shall contain the Buyer postal address (BG-8). Not applicable for simplified tax invoices and associated credit notes and debit notes (KSA-2, position 1 and 2 = 02).
+            [BR-KSA-63]-If the buyer country code (BT-55) is “SA”, then these fields are mandatory:additional number (KSA-19), street name (BT-35), building number (KSA-17),postal code (BT-38),  city (BT-37), Neighborhood (KSA-3), country code (BT-40).
+            [BR-KSA-67]-If the buyer country code (BT-55) is “SA”, then the Buyer postal code  (BT-53) must be 5 digits.</cbc:Description>
+      </cac:Response>
+      <!-- Document Reference -->
+      <cac:DocumentReference>
+         <!-- Invoice identifier of the referenced document -->
+         <cbc:ID>INV001</cbc:ID>
+         <!-- Document Type code -->
+         <cbc:DocumentTypeCode>388</cbc:DocumentTypeCode>
+      </cac:DocumentReference>
+   </cac:DocumentResponse>
+</ApplicationResponse>
