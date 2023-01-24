@@ -11,7 +11,7 @@ Extension is added to provide additional information in the `cac:Response` eleme
 |**Message response code** +
 A code stating whether the referenced message was cleared through validation and advanced to the next step in the process. +
 A negative response states that the document was not processed because of identified issues. +
-<<_puf_018_applicationresponsecode>>
+https://pagero.github.io/puf-code-lists/#_puf_018_applicationresponsecode[PUF-018-APPLICATIONRESPONSECODE^]
 
 |`cbc:Description`
 |**Response textual notes** +

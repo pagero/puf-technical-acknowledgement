@@ -585,14 +585,6 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_code_lists">5. Code lists</a>
 <ul class="sectlevel2">
 <li><a href="#_code_lists_for_coded_elements">5.1. Code lists for coded elements</a></li>
-<li><a href="#_puf_007_endpointscheme">5.2. PUF-007-ENDPOINTSCHEME</a></li>
-<li><a href="#_puf_008_identificationscheme">5.3. PUF-008-IDENTIFICATIONSCHEME</a>
-<ul class="sectlevel3">
-<li><a href="#_identification_scheme_saudi_arabia">5.3.1. Identification scheme Saudi Arabia</a></li>
-<li><a href="#_identification_scheme_india">5.3.2. Identification scheme India</a></li>
-</ul>
-</li>
-<li><a href="#_puf_018_applicationresponsecode">5.4. PUF-018-APPLICATIONRESPONSECODE</a></li>
 </ul>
 </li>
 <li><a href="#_xml_schemas">6. XML schemas</a></li>
@@ -1187,7 +1179,7 @@ Extension is added to provide additional information in the <code>cac:Response</
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Message response code</strong><br>
 A code stating whether the referenced message was cleared through validation and advanced to the next step in the process.<br>
 A negative response states that the document was not processed because of identified issues.<br>
-<a href="#_puf_018_applicationresponsecode">PUF-018-APPLICATIONRESPONSECODE</a></p></td>
+<a href="https://pagero.github.io/puf-code-lists/#_puf_018_applicationresponsecode" target="_blank" rel="noopener">PUF-018-APPLICATIONRESPONSECODE</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:Description</code></p></td>
@@ -1361,7 +1353,7 @@ to the Invoice in Pagero Online.</p></td>
 <h2 id="_code_lists"><a class="anchor" href="#_code_lists"></a><a class="link" href="#_code_lists">5. Code lists</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Certain elements require the use of PUF specific Code list. Below you will find the lists and where the lists are applicable.</p>
+<p>Certain elements require the use of <a href="https://pagero.github.io/puf-code-lists/" target="_blank" rel="noopener">PUF specific code lists</a>. Below you will find the lists and where the lists are applicable.</p>
 </div>
 <div class="paragraph">
 <p>In some of these code lists PUF only points towards an external code list to be used.</p>
@@ -1390,137 +1382,12 @@ to the Invoice in Pagero Online.</p></td>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Electronic address scheme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:AccountingSupplierParty/cac:Party/cbc:EndpointID/@schemeID</code><br>
-<code>cac:AccountingCustomerParty/cac:Party/cbc:EndpointID/@schemeID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_puf_007_endpointscheme">PUF-007-ENDPOINTSCHEME</a></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Message response code</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:DocumentResponse/cac:Response/cbc:ResponseCode</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_puf_018_applicationresponsecode">PUF-018-APPLICATIONRESPONSECODE</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://pagero.github.io/puf-code-lists/#_puf_018_applicationresponsecode" target="_blank" rel="noopener">PUF-018-APPLICATIONRESPONSECODE</a></p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="sect2">
-<h3 id="_puf_007_endpointscheme"><a class="anchor" href="#_puf_007_endpointscheme"></a><a class="link" href="#_puf_007_endpointscheme">5.2. PUF-007-ENDPOINTSCHEME</a></h3>
-<div class="paragraph">
-<p>For available values see OpenPeppol&#8217;s code list <a href="https://docs.peppol.eu/poacc/billing/3.0/codelist/eas/">Electronic Address Scheme (EAS)</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_puf_008_identificationscheme"><a class="anchor" href="#_puf_008_identificationscheme"></a><a class="link" href="#_puf_008_identificationscheme">5.3. PUF-008-IDENTIFICATIONSCHEME</a></h3>
-<div class="paragraph">
-<p>Supported values can be found in OpenPeppol&#8217;s code list <a href="https://docs.peppol.eu/poacc/billing/3.0/codelist/ICD/">ISO 6523 ICD list</a>.</p>
-</div>
-<div class="paragraph">
-<p>For <code>cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID</code> and
-<code>cac:PayeeParty/cac:PartyIdentification/cbc:ID/@schemeID</code> an additional code list is also applicable: <a href="https://docs.peppol.eu/poacc/billing/3.0/codelist/SEPA/">SEPA indicator</a>.</p>
-</div>
-<div class="paragraph">
-<p>For additional identification scheme identifier added in PUF see below recommendations.</p>
-</div>
-<div class="sect3">
-<h4 id="_identification_scheme_saudi_arabia"><a class="anchor" href="#_identification_scheme_saudi_arabia"></a><a class="link" href="#_identification_scheme_saudi_arabia">5.3.1. Identification scheme Saudi Arabia</a></h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Value</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SA:HQ</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Group VAT number</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SA:NAT</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">National ID</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SA:TIN</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tax Identification Number</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SA:IQA</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Iqama Number</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SA:PAS</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Passport ID</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SA:CRN</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Commercial registration number</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SA:MOM</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Momra license</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SA:MLS</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">MLSD license</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SA:700</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">700 number</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SA:SAG</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sagia license</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SA:GCC</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GCC ID</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SA:OTH</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other ID</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_identification_scheme_india"><a class="anchor" href="#_identification_scheme_india"></a><a class="link" href="#_identification_scheme_india">5.3.2. Identification scheme India</a></h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Value</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IN:PAN</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PAN is a 10-digit unique identification alpha-numeric number.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IN:GSTIN</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GSTIN is a 15-digit PAN-based unique identification number assigned to every registered person under GST.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IN:CIN</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Corporate Identification Number (CIN) is a 21 digits alpha-numeric unique identification number that is assigned by the Registrar of Companies (ROC).</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_puf_018_applicationresponsecode"><a class="anchor" href="#_puf_018_applicationresponsecode"></a><a class="link" href="#_puf_018_applicationresponsecode">5.4. PUF-018-APPLICATIONRESPONSECODE</a></h3>
-<div class="paragraph">
-<p>Supported values can be found in <a href="https://peppol.org" target="_blank" rel="noopener">OpenPeppol&#8217;s</a> code list <a href="https://docs.peppol.eu/poacc/upgrade-3/codelist/UNCL4343/" target="_blank" rel="noopener">Application Response Type Code</a>.</p>
-</div>
 </div>
 </div>
 </div>
