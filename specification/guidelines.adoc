@@ -1,5 +1,4 @@
-PUF Technical Acknowledgement is a document type that is applicable to be exchanged between Pagero and supplier/issuer to inform the issuer of an invoice about the trasport of a message
-but can also contain information on a technical level regarding rejections due to for example schematron errors. 
+PUF Technical Acknowledgement is a document type that is applicable to be exchanged between Pagero and sender/issuer to inform the about the transport of a message but can also contain information on a technical level regarding rejections due to for example schematron errors. 
 
 This message type is often referred to as transport level acknowledgement or message level response.
 
@@ -43,7 +42,7 @@ To indicate the correct PUF specification identifer and the profile identifier, 
 |===
 |Type |Element `cbc:CustomizationID` |Element `cbc:ProfileID`
 
-|*Invoice Response*
+|*Technical Acknowledgement*
 |urn:pagero.com:puf:technical_acknowledgement:1.0
 |urn:pagero.com:puf:technical_acknowledgement:1.0
 |===
@@ -108,14 +107,14 @@ A minor release will always be backward compatible and will take place without p
 
 Minor releases may include bugfixes, new elements, schematron updates and other features. 
 
-To be automatically notified of all releases, please "Watch" the project repository on https://github.com/pagero/puf-technical-acknowledgement[GitHub].
+To be automatically notified of all releases, please "Watch" the project repository on https://github.com/pagero/puf-technical-acknowledgement[GitHub^].
 
 ==== Major release
 
 A major release may include changes that are not backward compatible. 
 
-Such a release will be notified at least three months prior to date of implementation, to users who registered an account on Pagero validex or on https://github.com/pagero/puf-technical-acknowledgement[GitHub].
+Such a release will be notified at least three months prior to date of implementation, to users who registered an account on Pagero validex or on https://github.com/pagero/puf-technical-acknowledgement[GitHub^].
 
-To register for PUF major release notification you can create a free account on https://pagero.validex.net[Pagero Validex]. 
+To register for PUF major release notification you can create a free account on https://pagero.validex.net[Pagero Validex^]. 
 
-But we strongly urge all interested parties to "Watch" the project repository on https://github.com/pagero/puf-technical-acknowledgement-response[GitHub] where all releases will trigger automatic notifications.
+But we strongly urge all interested parties to "Watch" the project repository on https://github.com/pagero/puf-technical-acknowledgement-response[GitHub^] where all releases will trigger automatic notifications.
