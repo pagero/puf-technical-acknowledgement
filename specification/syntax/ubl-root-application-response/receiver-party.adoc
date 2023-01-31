@@ -1,4 +1,4 @@
-cac:ReceiverParty is required according to XSD but will not be populated in PUF Technical Acknowledgement
+`cac:ReceiverParty` is required according to the UBL XML schema but will not be populated in PUF Technical Acknowledgement.
 
 *Example* +
 cac:ReceiverParty
@@ -7,7 +7,8 @@ cac:ReceiverParty
 ----
 <ApplicationResponse>
   <!-- Code omitted for clarity -->
-  <cac:ReceiverParty/>
+  <cac:ReceiverParty/><!--1-->
   <!-- Code omitted for clarity -->
 </ApplicationResponse>
 ----
+<1> Please note the empty party!

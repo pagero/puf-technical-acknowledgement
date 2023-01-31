@@ -5,13 +5,13 @@
 |`ext:UBLExtensions`
 |**Extension Content** +
 Extension is added to provide additional information in the `cac:Response` element, added elements in regards to `ext:UBLExtensions` for `cac:Response` can be found below: +
-<<_response_extension>>
+<<_response_extension>>.
 
 |`cbc:ResponseCode`
 |**Message response code** +
 A code stating whether the referenced message was cleared through validation and advanced to the next step in the process. +
 A negative response states that the document was not processed because of identified issues. +
-https://pagero.github.io/puf-code-lists/#_puf_018_applicationresponsecode[PUF-018-APPLICATIONRESPONSECODE^]
+https://pagero.github.io/puf-code-lists/#_puf_018_applicationresponsecode[PUF-018-APPLICATIONRESPONSECODE^].
 
 |`cbc:Description`
 |**Response textual notes** +

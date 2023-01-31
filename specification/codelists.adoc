@@ -16,7 +16,7 @@ Lastly, in some cases, *all* the values are defined solely for PUF.
 
 |Message response code 
 |`cac:DocumentResponse/cac:Response/cbc:ResponseCode`
-|https://pagero.github.io/puf-code-lists/#_puf_018_applicationresponsecode[PUF-018-APPLICATIONRESPONSECODE^]
+|https://pagero.github.io/puf-code-lists/#_puf_018_applicationresponsecode[PUF-018-APPLICATIONRESPONSECODE^].
 |===
 
 
