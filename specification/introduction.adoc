@@ -18,6 +18,7 @@ PUF will to a large extent try to follow and align with the work done in https:/
 |===
 |Version |Date |Description
 |1.0 |2023-01-27 |First version published.
+|1.1|2023-05-04|Added https://pagero.github.io/puf-technical-acknowledgement/#_response_extension[ErrorClassificationCode^]
 |===
 
 === Response messages in general
@@ -56,7 +57,7 @@ It will inform the issuer of an document of the clearance/reporting status (i.e.
 
 ==== Invoice response
 
-This is often referred to as business level response.
+This is often referred to as business level response or application response.
 
 It is a document issued by the recipient/buyer to inform the issuer of an invoice about business decisions.
 
