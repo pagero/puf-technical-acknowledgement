@@ -35,7 +35,8 @@ _cac:Response with example values_
               <puf:PageroExtension>
                 <puf:ReferencedDocumentInterchangeID>
                   <cbc:ID>123456789</cbc:ID>
-                </puf:ReferencedDocumentInterchangeID>  
+                </puf:ReferencedDocumentInterchangeID>
+                <puf:ErrorClassificationCode>18100</puf:ErrorClassificationCode>  
               </puf:PageroExtension>
           </ext:ExtensionContent>
         </ext:UBLExtension>

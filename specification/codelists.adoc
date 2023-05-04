@@ -17,6 +17,12 @@ Lastly, in some cases, *all* the values are defined solely for PUF.
 |Message response code 
 |`cac:DocumentResponse/cac:Response/cbc:ResponseCode`
 |https://pagero.github.io/puf-code-lists/#_puf_018_applicationresponsecode[PUF-018-APPLICATIONRESPONSECODE^].
+
+|Error Classification Code 
+|`cac:DocumentResponse/cac:Response/ext:UBLExtensions
+/ext:UBLExtension/ext:ExtensionContent/puf:PageroExtension
+/puf:ResponseExtension/puf:ErrorClassificationCode`
+|https://pagero.github.io/puf-code-lists/#_puf_020_errorclassificationcode[PUF-020-ERRORCLASSIFICATIONCODE^].
 |===
 
 
