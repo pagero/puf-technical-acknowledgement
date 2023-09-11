@@ -1,6 +1,6 @@
 ==== puf:ResponseExtension
 
-Below table shows the definition of elements added to the extension `puf:ResponseExtension`.
+Below table shows the definition of elements added to the extension `puf:PageroExtension/puf:ResponseExtension`.
 
 .Elements added in puf:ResponseExtension
 |===
@@ -32,12 +32,14 @@ _puf:ResponseExtension with sample values._
         <ext:UBLExtension>
           <ext:ExtensionURI>urn:pagero:ExtensionComponent:1.0:PageroExtension:ResponseExtension</ext:ExtensionURI>
           <ext:ExtensionContent>
-              <puf:PageroExtension>
+            <puf:PageroExtension>
+              <puf:ResponseExtension>
                 <puf:ReferencedDocumentInterchangeID>
                   <cbc:ID>123456789</cbc:ID>
                 </puf:ReferencedDocumentInterchangeID>
-                <puf:ErrorClassificationCode>18100</puf:ErrorClassificationCode>    
-              </puf:PageroExtension>
+                <puf:ErrorClassificationCode>18100</puf:ErrorClassificationCode>
+              </puf:ResponseExtension>
+            </puf:PageroExtension>
           </ext:ExtensionContent>
         </ext:UBLExtension>
       <ext:UBLExtensions>
