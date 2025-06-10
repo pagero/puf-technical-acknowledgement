@@ -1,0 +1,46 @@
+==== puf:DocumentReferenceExtension
+
+Below table shows the definition of elements added to the extension `puf:PageroExtension/puf:DocumentReferenceExtension`.
+
+.Elements added in puf:DocumentReferenceExtension
+|===
+|Element |Description
+
+|`puf:DistributionMethod`
+|**Distribution Method** +
+The distribution method of the referenced document. This is the method used to distribute the document from Pagero Online. +
+**Electronic** - The document was distributed as a 'true' electronic document. +
+**Print** - The document was printed and posted on regular mail through a print provider. +
+**Email** - The document was distributed through email. +
+**None** - Distribution method not specified. +
+
+|===
+
+See example below as well as the URI to be used for this extension.
+
+*Example* +
+_puf:DocumentReferenceExtension with sample values._
+[source,xml]
+----
+<ApplicationResponse>
+  <!-- Code omitted for clarity -->
+       <cac:DocumentReference>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionURI>urn:pagero:ExtensionComponent:1.0:PageroExtension:DocumentReferenceExtension</ext:ExtensionURI>
+               <ext:ExtensionContent>
+                  <puf:PageroExtension>
+                     <puf:DocumentReferenceExtension>
+                        <puf:DistributionMethod>Electronic</puf:DistributionMethod>
+                     </puf:DocumentReferenceExtension>
+                  </puf:PageroExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:ID>814276330</cbc:ID>
+         <cbc:IssueDate>2025-05-02</cbc:IssueDate>
+         <cbc:DocumentTypeCode>380</cbc:DocumentTypeCode>
+      </cac:DocumentReference>
+  <!-- Code omitted for clarity -->
+</ApplicationResponse>
+----

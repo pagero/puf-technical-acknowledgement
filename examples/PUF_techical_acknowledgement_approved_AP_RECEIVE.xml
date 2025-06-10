@@ -43,6 +43,19 @@
       </cac:Response>
       <!-- Document Reference -->
       <cac:DocumentReference>
+         <!-- The distribution method of the referenced document. -->
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionURI>urn:pagero:ExtensionComponent:1.0:PageroExtension:DocumentReferenceExtension</ext:ExtensionURI>
+               <ext:ExtensionContent>
+                  <puf:PageroExtension>
+                     <puf:DocumentReferenceExtension>
+                        <puf:DistributionMethod>Electronic</puf:DistributionMethod>
+                     </puf:DocumentReferenceExtension>
+                  </puf:PageroExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
          <!-- Invoice identifier of the referenced document -->
          <cbc:ID>ecc98425-5f62-4a41-b71e-cb68347f8bd6-0100000</cbc:ID>
          <!-- Document Type code -->
