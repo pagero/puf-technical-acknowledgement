@@ -3,3 +3,9 @@
 Below chapter describes the elements added in `cac:DocumentResponse/cac:Response/ext:UBLExtensions`.
 
 include::extensions/ubl-root-application-response/response-extension.adoc[]
+
+=== DocumentReference extension
+
+Below chapter describes the elements added in `cac:DocumentResponse/cac:DocumentReference/ext:UBLExtensions`.
+
+include::extensions/ubl-root-application-response/document-reference-extension.adoc[]

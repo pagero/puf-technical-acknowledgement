@@ -581,6 +581,11 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_pufresponseextension">4.1.1. puf:ResponseExtension</a></li>
 </ul>
 </li>
+<li><a href="#_documentreference_extension">4.2. DocumentReference extension</a>
+<ul class="sectlevel3">
+<li><a href="#_pufdocumentreferenceextension">4.2.1. puf:DocumentReferenceExtension</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_code_lists">5. Code lists</a>
@@ -1268,6 +1273,12 @@ A textual note containing comments or instructions relevant to the response.</p>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ext:UBLExtensions</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Extension Content</strong><br>
+Extension is added to provide additional information in the <code>cac:DocumentReference</code> element, added elements in regards to <code>ext:UBLExtensions</code> for <code>cac:DocumentReference</code> can be found below:<br>
+<a href="#_documentreference_extension">DocumentReference extension</a>.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ID</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Document identifier</strong><br>
 Identifer of the referenced document (e.g. invoice number).</p></td>
@@ -1394,6 +1405,74 @@ See <a href="https://pagero.github.io/puf-code-lists/#_puf_020_errorclassificati
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_documentreference_extension"><a class="anchor" href="#_documentreference_extension"></a><a class="link" href="#_documentreference_extension">4.2. DocumentReference extension</a></h3>
+<div class="paragraph">
+<p>Below chapter describes the elements added in <code>cac:DocumentResponse/cac:DocumentReference/ext:UBLExtensions</code>.</p>
+</div>
+<div class="sect3">
+<h4 id="_pufdocumentreferenceextension"><a class="anchor" href="#_pufdocumentreferenceextension"></a><a class="link" href="#_pufdocumentreferenceextension">4.2.1. puf:DocumentReferenceExtension</a></h4>
+<div class="paragraph">
+<p>Below table shows the definition of elements added to the extension <code>puf:PageroExtension/puf:DocumentReferenceExtension</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. Elements added in puf:DocumentReferenceExtension</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>puf:DistributionMethod</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Distribution Method</strong><br>
+The distribution method of the referenced document. This is the method used to distribute the document from Pagero Online.<br>
+<strong>Electronic</strong> - The document was distributed as a 'true' electronic document.<br>
+<strong>Print</strong> - The document was printed and posted on regular mail through a print provider.<br>
+<strong>Email</strong> - The document was distributed through email.<br>
+<strong>None</strong> - Distribution method not specified.<br></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>See example below as well as the URI to be used for this extension.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong><br>
+<em>puf:DocumentReferenceExtension with sample values.</em></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ApplicationResponse&gt;</span>
+  <span class="comment">&lt;!-- Code omitted for clarity --&gt;</span>
+       <span class="tag">&lt;cac:DocumentReference&gt;</span>
+         <span class="tag">&lt;ext:UBLExtensions&gt;</span>
+            <span class="tag">&lt;ext:UBLExtension&gt;</span>
+               <span class="tag">&lt;ext:ExtensionURI&gt;</span>urn:pagero:ExtensionComponent:1.0:PageroExtension:DocumentReferenceExtension<span class="tag">&lt;/ext:ExtensionURI&gt;</span>
+               <span class="tag">&lt;ext:ExtensionContent&gt;</span>
+                  <span class="tag">&lt;puf:PageroExtension&gt;</span>
+                     <span class="tag">&lt;puf:DocumentReferenceExtension&gt;</span>
+                        <span class="tag">&lt;puf:DistributionMethod&gt;</span>Electronic<span class="tag">&lt;/puf:DistributionMethod&gt;</span>
+                     <span class="tag">&lt;/puf:DocumentReferenceExtension&gt;</span>
+                  <span class="tag">&lt;/puf:PageroExtension&gt;</span>
+               <span class="tag">&lt;/ext:ExtensionContent&gt;</span>
+            <span class="tag">&lt;/ext:UBLExtension&gt;</span>
+         <span class="tag">&lt;/ext:UBLExtensions&gt;</span>
+         <span class="tag">&lt;cbc:ID&gt;</span>814276330<span class="tag">&lt;/cbc:ID&gt;</span>
+         <span class="tag">&lt;cbc:IssueDate&gt;</span>2025-05-02<span class="tag">&lt;/cbc:IssueDate&gt;</span>
+         <span class="tag">&lt;cbc:DocumentTypeCode&gt;</span>380<span class="tag">&lt;/cbc:DocumentTypeCode&gt;</span>
+      <span class="tag">&lt;/cac:DocumentReference&gt;</span>
+  <span class="comment">&lt;!-- Code omitted for clarity --&gt;</span>
+<span class="tag">&lt;/ApplicationResponse&gt;</span></code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1414,7 +1493,7 @@ See <a href="https://pagero.github.io/puf-code-lists/#_puf_020_errorclassificati
 <div class="sect2">
 <h3 id="_code_lists_for_coded_elements"><a class="anchor" href="#_code_lists_for_coded_elements"></a><a class="link" href="#_code_lists_for_coded_elements">5.1. Code lists for coded elements</a></h3>
 <table class="tableblock frame-all grid-all fit-content stretch">
-<caption class="title">Table 5. Table of the code lists used</caption>
+<caption class="title">Table 6. Table of the code lists used</caption>
 <colgroup>
 <col>
 <col>

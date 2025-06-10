@@ -2,6 +2,11 @@
 |===
 |Path |Description
 
+|`ext:UBLExtensions`
+|**Extension Content** +
+Extension is added to provide additional information in the `cac:DocumentReference` element, added elements in regards to `ext:UBLExtensions` for `cac:DocumentReference` can be found below: +
+<<_documentreference_extension>>.
+
 |`cbc:ID`
 |**Document identifier** +
 Identifer of the referenced document (e.g. invoice number).
