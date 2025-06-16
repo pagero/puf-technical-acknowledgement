@@ -104,7 +104,15 @@
                     </xsd:complexType>
 
                 </xsd:element>
+                <xsd:element name="DocumentReferenceExtension" minOccurs="0" maxOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="DistributionMethod" type="PUFTextType" minOccurs="0" maxOccurs="1"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
             </xsd:sequence>
+
         </xsd:complexType>
     </xsd:element>
 
