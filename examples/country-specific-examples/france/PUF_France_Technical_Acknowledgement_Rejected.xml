@@ -40,6 +40,8 @@
                                 <puf:ReferencedDocumentInterchangeID>
                                     <cbc:ID>333222111</cbc:ID>
                                 </puf:ReferencedDocumentInterchangeID>
+                                <!-- The type of receipt, i.e. the processing stage that the acknowledgement reports on -->
+                                <puf:ReceiptType>PROCESSED</puf:ReceiptType>
                                 <!--Pagero internal error code-->
                                 <puf:ErrorClassificationCode>24400</puf:ErrorClassificationCode>
                             </puf:ResponseExtension>

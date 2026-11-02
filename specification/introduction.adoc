@@ -19,6 +19,7 @@ PUF will to a large extent try to follow and align with the work done in https:/
 |Version |Date |Description
 |1.0 |2023-01-27 |First version published.
 |1.1|2023-05-04|Added https://pagero.github.io/puf-technical-acknowledgement/#_response_extension[ErrorClassificationCode^]
+|1.2|2026-11-02|Added https://pagero.github.io/puf-technical-acknowledgement/#_receipt_types[ReceiptType^]
 |===
 
 === Response messages in general
