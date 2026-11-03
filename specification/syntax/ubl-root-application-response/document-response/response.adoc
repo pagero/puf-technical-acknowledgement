@@ -37,6 +37,7 @@ _cac:Response with example values_
                 <puf:ReferencedDocumentInterchangeID>
                   <cbc:ID>123456789</cbc:ID>
                 </puf:ReferencedDocumentInterchangeID>
+                <puf:ReceiptType>PROCESSED</puf:ReceiptType>
                 <puf:ErrorClassificationCode>18100</puf:ErrorClassificationCode>
               </puf:ResponseExtension>
             </puf:PageroExtension>

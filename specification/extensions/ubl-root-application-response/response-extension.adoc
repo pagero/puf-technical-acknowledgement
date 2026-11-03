@@ -16,6 +16,11 @@ From PUF Billing documents sent to Pagero, restricted information values on docu
 The interchange id of the referenced document (if sent by the issuer). +
 This ID is applicable when you receive a response. Then this ID will be the interchange ID (if sent) of the Invoice.
 
+|`puf:ReceiptType`
+|**Receipt type** +
+The processing stage of the referenced document that the acknowledgement reports on. +
+The values, and when each one is sent, are described in <<_receipt_types>>.
+
 |`puf:ErrorClassificationCode`
 |**Error classification code** +
 An internal error code set by Pagero in the case that the error is classifiable. +
@@ -42,6 +47,7 @@ _puf:ResponseExtension with sample values._
                 <puf:ReferencedDocumentInterchangeID>
                   <cbc:ID>123456789</cbc:ID>
                 </puf:ReferencedDocumentInterchangeID>
+                <puf:ReceiptType>PROCESSED</puf:ReceiptType>
                 <puf:ErrorClassificationCode>18100</puf:ErrorClassificationCode>
               </puf:ResponseExtension>
             </puf:PageroExtension>
@@ -52,3 +58,32 @@ _puf:ResponseExtension with sample values._
   <!-- Code omitted for clarity -->
 </ApplicationResponse>
 ----
+
+===== Receipt types
+
+The receipt type tells you which stage the acknowledgement reports on. A document can give several receipts during its life, one for each stage. It can for example first get a `PROCESSED` receipt and later a `DELIVERED` receipt.
+
+Which receipts you get is controlled by the receipt settings of your Pagero Online account, which can differ per document type. The settings decide whether you get receipts only for errors, when the document is processed, when it is delivered, or both. Without receipt settings no receipts are sent. Some types are only used for tax data reporting.
+
+.When each receipt type is sent
+|===
+|Value |When you get it
+
+|`RECEIVED`
+|Pagero has received your file. Sent only if your account is set up to get a receipt when a file is received. It confirms that the file arrived, not that its content was accepted, and the response code is `AB`.
+
+|`PROCESSED`
+|Pagero has finished processing the document. Sent if your account is set to get a receipt when documents are processed. Errors are reported with this type too. The response code then shows that the document was rejected, together with the error details.
+
+|`AVAILABLE_FOR_RECEIVER`
+|The document was made available to the receiving user in Pagero Online and waits for an action from that user. From your point of view the document counts as delivered at this point. Not sent if your account is set to get receipts for errors only. If your account is set to get receipts for both processing and delivery, you also get a `PROCESSED` receipt.
+
+|`DELIVERED`
+|The document was delivered to the receiver. Sent if your account is set to get a receipt when documents are delivered, or when they are both processed and delivered. For tax data reporting it means that the report was delivered.
+
+|`READY_TO_BATCH`
+|Tax data reporting only. The report has been processed and waits to be grouped with other reports before it is sent on. Sent only if receipts are enabled for your tax data reporting and this stage is selected.
+
+|===
+
+NOTE: Tax data reporting has its own receipt settings, where you select which stages give a receipt: ready to batch, delivered or failed. A failed report is sent as `PROCESSED` with a negative response code.

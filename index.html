@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="generator" content="Asciidoctor 2.0.26">
 <meta name="author" content="Copyright &copy; 2023, Pagero Group">
 <meta name="copyright" content="Pagero Group">
 <title>PUF Technical Acknowledgement 1.0</title>
@@ -657,6 +657,11 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <td class="tableblock halign-left valign-top"><p class="tableblock">2023-05-04</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Added <a href="https://pagero.github.io/puf-technical-acknowledgement/#_response_extension" target="_blank" rel="noopener">ErrorClassificationCode</a></p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2026-11-02</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Added <a href="https://pagero.github.io/puf-technical-acknowledgement/#_receipt_types" target="_blank" rel="noopener">ReceiptType</a></p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1243,6 +1248,7 @@ A textual note containing comments or instructions relevant to the response.</p>
                 <span class="tag">&lt;puf:ReferencedDocumentInterchangeID&gt;</span>
                   <span class="tag">&lt;cbc:ID&gt;</span>123456789<span class="tag">&lt;/cbc:ID&gt;</span>
                 <span class="tag">&lt;/puf:ReferencedDocumentInterchangeID&gt;</span>
+                <span class="tag">&lt;puf:ReceiptType&gt;</span>PROCESSED<span class="tag">&lt;/puf:ReceiptType&gt;</span>
                 <span class="tag">&lt;puf:ErrorClassificationCode&gt;</span>18100<span class="tag">&lt;/puf:ErrorClassificationCode&gt;</span>
               <span class="tag">&lt;/puf:ResponseExtension&gt;</span>
             <span class="tag">&lt;/puf:PageroExtension&gt;</span>
@@ -1363,6 +1369,12 @@ The interchange id of the referenced document (if sent by the issuer).<br>
 This ID is applicable when you receive a response. Then this ID will be the interchange ID (if sent) of the Invoice.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>puf:ReceiptType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Receipt type</strong><br>
+The processing stage of the referenced document that the acknowledgement reports on.<br>
+The values, and when each one is sent, are described in <a href="#_receipt_types">Receipt types</a>.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>puf:ErrorClassificationCode</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error classification code</strong><br>
 An internal error code set by Pagero in the case that the error is classifiable.<br>
@@ -1392,6 +1404,7 @@ See <a href="https://pagero.github.io/puf-code-lists/#_puf_020_errorclassificati
                 <span class="tag">&lt;puf:ReferencedDocumentInterchangeID&gt;</span>
                   <span class="tag">&lt;cbc:ID&gt;</span>123456789<span class="tag">&lt;/cbc:ID&gt;</span>
                 <span class="tag">&lt;/puf:ReferencedDocumentInterchangeID&gt;</span>
+                <span class="tag">&lt;puf:ReceiptType&gt;</span>PROCESSED<span class="tag">&lt;/puf:ReceiptType&gt;</span>
                 <span class="tag">&lt;puf:ErrorClassificationCode&gt;</span>18100<span class="tag">&lt;/puf:ErrorClassificationCode&gt;</span>
               <span class="tag">&lt;/puf:ResponseExtension&gt;</span>
             <span class="tag">&lt;/puf:PageroExtension&gt;</span>
@@ -1401,6 +1414,62 @@ See <a href="https://pagero.github.io/puf-code-lists/#_puf_020_errorclassificati
     <span class="tag">&lt;/cac:Response&gt;</span>
   <span class="comment">&lt;!-- Code omitted for clarity --&gt;</span>
 <span class="tag">&lt;/ApplicationResponse&gt;</span></code></pre>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_receipt_types"><a class="anchor" href="#_receipt_types"></a><a class="link" href="#_receipt_types">Receipt types</a></h5>
+<div class="paragraph">
+<p>The receipt type tells you which stage the acknowledgement reports on. A document can give several receipts during its life, one for each stage. It can for example first get a <code>PROCESSED</code> receipt and later a <code>DELIVERED</code> receipt.</p>
+</div>
+<div class="paragraph">
+<p>Which receipts you get is controlled by the receipt settings of your Pagero Online account, which can differ per document type. The settings decide whether you get receipts only for errors, when the document is processed, when it is delivered, or both. Without receipt settings no receipts are sent. Some types are only used for tax data reporting.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. When each receipt type is sent</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">When you get it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RECEIVED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pagero has received your file. Sent only if your account is set up to get a receipt when a file is received. It confirms that the file arrived, not that its content was accepted, and the response code is <code>AB</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PROCESSED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pagero has finished processing the document. Sent if your account is set to get a receipt when documents are processed. Errors are reported with this type too. The response code then shows that the document was rejected, together with the error details.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AVAILABLE_FOR_RECEIVER</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The document was made available to the receiving user in Pagero Online and waits for an action from that user. From your point of view the document counts as delivered at this point. Not sent if your account is set to get receipts for errors only. If your account is set to get receipts for both processing and delivery, you also get a <code>PROCESSED</code> receipt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DELIVERED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The document was delivered to the receiver. Sent if your account is set to get a receipt when documents are delivered, or when they are both processed and delivered. For tax data reporting it means that the report was delivered.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>READY_TO_BATCH</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tax data reporting only. The report has been processed and waits to be grouped with other reports before it is sent on. Sent only if receipts are enabled for your tax data reporting and this stage is selected.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Tax data reporting has its own receipt settings, where you select which stages give a receipt: ready to batch, delivered or failed. A failed report is sent as <code>PROCESSED</code> with a negative response code.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -1416,7 +1485,7 @@ See <a href="https://pagero.github.io/puf-code-lists/#_puf_020_errorclassificati
 <p>Below table shows the definition of elements added to the extension <code>puf:PageroExtension/puf:DocumentReferenceExtension</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 5. Elements added in puf:DocumentReferenceExtension</caption>
+<caption class="title">Table 6. Elements added in puf:DocumentReferenceExtension</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1493,7 +1562,7 @@ The distribution method of the referenced document. This is the method used to d
 <div class="sect2">
 <h3 id="_code_lists_for_coded_elements"><a class="anchor" href="#_code_lists_for_coded_elements"></a><a class="link" href="#_code_lists_for_coded_elements">5.1. Code lists for coded elements</a></h3>
 <table class="tableblock frame-all grid-all fit-content stretch">
-<caption class="title">Table 6. Table of the code lists used</caption>
+<caption class="title">Table 7. Table of the code lists used</caption>
 <colgroup>
 <col>
 <col>
