@@ -9,7 +9,8 @@ Extension is added to provide additional information in the `cac:DocumentReferen
 
 |`cbc:ID`
 |**Document identifier** +
-Identifer of the referenced document (e.g. invoice number).
+Identifer of the referenced document (e.g. invoice number). +
+For a tax data report, the identifier of the first invoice or payment in the report.
 
 |`cbc:IssueDate`
 |**Issue date** +
@@ -19,6 +20,7 @@ _Format must be "YYYY-MM-DD"._
 |`cbc:DocumentTypeCode`
 |**Document type code** +
 Type code of the referenced document (e.g. 380=Invoice, 381 Credit note etc.).
+A tax data report has type code `TDR`.
 For valid values see code list + 
 https://pagero.github.io/puf-code-lists/#_puf_019_documentreferencedoctypecode[PUF-019-DOCUMENTREFERENCEDOCTYPECODE^].
 
